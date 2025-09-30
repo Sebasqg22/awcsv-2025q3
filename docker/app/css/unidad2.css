@@ -1,123 +1,141 @@
-    /* 
+/*
+* {
+    color: #888;
+}
+    /*
+
+        /* 
     px pixel exacto, funciona: bordes, no es responsive
-    em tamanno del padre, espacios entre elementos, medio responsive
+    em tamanno del padre, espacios entre elementos, medio responsive padding  margin
     rem tamanno del html, tipografias, si es responsive
     % tamanno del contenedor, anchos y altos, si es reponsive
     vw / vh tamanno ventana, secciones completas, si es responsive
     */
-    /*
-    * {
-        margin: 0;
-        padding: 0;
-    }
+html {
+    font-size: 0.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.info {
+    text-align: center;
+    padding: 2em 1em;
+    margin: 0 auto;
+}
+
+.speakers {
+    background-color: white;
+    padding: 2em 1em;
+
+}
+
+.speakers h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.speakers-list {
+    margin: 2em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+.speakers-list > .speaker {
+    color: orange;  
+}
     */
-    html {
-        font-size: 1.2rem;
-        color: #16162d;
+.speaker {
+    background-color: #e9f2ff;
+    padding: 1.5em;
+    border-radius: 5px;
+    width: 20%;
+}
+
+h3~p {
+    color: orange;
+}
+
+h3+p {
+    color: blue;
+}
+
+
+.register {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: #007bff;
+    color: white;
+}
+
+.register button {
+    background-color: white;
+    color: #007bff;
+    font-size: 0.5rem;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9rem;
+}
+
+#unico {
+    background-color: red;
+}
+
+input[type] {
+    border-color: red;
+}
+
+input[type="number"] {
+    background-color: orange;
+}
+
+[id*="i"] {
+    background-color: rebeccapurple;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    section {
+        width: 80%;
     }
-
-
-
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f5f7fa;
-        color: #333;
-    }
-
-
-    header {
-        background: linear-gradient(135deg, #007bff, #6610f2);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: white;
-        padding: 3em 5em;
-        text-align: center;
-    }
-
-    .speaker {
-        background-color: white;
-        padding: 1em 2em;
-    }
-
-    #info {
-        text-align: center;
-        padding: 1em 2em;
-        margin: 0 auto;
-    }
-
-    input[type] {
-        border-color: red;
-    }
-
-    input[type="color"] {
-        border-color: blue;
-    }
-
-    [id*="i"] {
-        background-color: yellow;
-    }
-
-    .speakers .speaker {
-        border: 2px blue solid;
-        margin: 1em;
-    }
-
-    h3+p {
-        color: blue;
-    }
-
-    /*h3 ~ p {
-        color: orange;
-    }*/
 
     .speakers {
-        background-color: blueviolet;
-        display: flex;
-        justify-content: space-around;
-        height: 400px;
-        align-items: center;
+        width: 700px;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    footer {
-        background-color: #343a40;
-        color: #fff;
-        text-align: center;
-        padding: 1em;
-        font-size: 0.9rem;
+    header {
+        color: purple;
     }
-
-    .register {
-        text-align: center;
-        padding: 3em 1em;
-        background-color:  #007bff;
-        color: white;
-
-    }
-
-    .register button{
-        background-color: white;
-        color: #007bff;
-        font-size: 1.2rem;
-        padding: 0.8em 2em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 700px) {
-        section {
-            width: 80%;
-        }
-        .speakers {
-            width: 700px;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        header {
-            color: purple;
-        }
-    }
+}

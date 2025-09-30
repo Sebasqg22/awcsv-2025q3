@@ -1,11 +1,23 @@
-.form-control {
-    border-color: red;
-}
-
-#email {
-    background-color: yellow;
-}
-
 .navbar a {
-    color: blue!important;
+    color: red;
+
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: blue;
+}
+
+.btn-outline-success {
+    background-color: aqua;
+    border-color: blue;
+    color: blueviolet;
+}
+
+.btn-primary {
+   background-color: pink;
+
+}
+
+.btn:hover {
+    background-color: purple;
 }
