@@ -1,0 +1,23 @@
+.navbar a {
+    color: red;
+
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: blue;
+}
+
+.btn-outline-success {
+    background-color: aqua;
+    border-color: blue;
+    color: blueviolet;
+}
+
+.btn-primary {
+   background-color: pink;
+
+}
+
+.btn:hover {
+    background-color: purple;
+}
