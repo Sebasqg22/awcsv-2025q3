@@ -1,98 +1,90 @@
-console.log("Hello world!");
+// declarar variables
+let nombre = "Karol";
+let apellido = "Leal";
+let edad = 35;
+let altura = 1.60;
+let esEstudiante = false;
 
-var name = "Karol";
-let lastname = "Leal";
-let age = 35;
-let isStudent = false;
-let salary = 100.89;
+let informacionGeneral = {
+    nombre: "Karol",
+    apellido: "Leal",
+    edad: 35,
+    altura: 1.60,
+    esEstudiante: true
+}
 
-console.log(name);
-console.log(lastname);
-console.log(age);
-console.log(isStudent);
-console.log(salary);
+let listaEdades = [23, 40, 46, 10];
+let listaFrutas = ["manzana", "pera", "melon"];
 
 const mayorEdad = 18;
 
-let total = 20;
+console.log("Hola mundo!");
+console.log(nombre);
+console.log(apellido);
+console.log(edad);
+console.log(esEstudiante);
+console.log(informacionGeneral);
+console.log(listaEdades);
+console.log(listaFrutas);
 
+// Ambito
+
+let total = 0; // global
 console.log(total);
-
-function suma(a, b) {
-    let total = a + b;
+function sumar(a, b) {
+    let total = a + b; //local
     console.log(total);
 }
-
-suma(5, 6);
+sumar(5, 6);
 console.log(total);
 
-// propiedades
+console.log("Longitud de nombre: " + nombre.length);
+console.log(nombre.toLowerCase());
+console.log(nombre.replace("l", "i"));
+console.log(edad.toString());
+console.log(altura.toFixed(1));
+console.log(esEstudiante.toString());
 
-console.log(lastname.length);
-// Ejemplo si una clave tiene min 5 a 10 digitos
-console.log(lastname.charAt(2));
-console.log(lastname.replace("L", "1"))
-console.log("Edad: " + age.toString());
-console.log(salary.toFixed(1));
-console.log(isStudent.toString());
+console.log(listaFrutas.pop());
+console.log(listaFrutas);
 
-let fruits = ["manzana", "melon", "sandia"];
-console.log(fruits)
+let validacionCamposRequerido = true;
 
-let personalInfo = {
-    name: "Karol",
-    lastname: "Leal",
-    age: 35,
-    salary: 100.90,
-    isStudent: false
-}
-
-console.log(personalInfo);
-console.log(personalInfo.age);
-
-let permiso = (isStudent) ? false : true;
-
-//variable = condicion ? true : false;
-
-// Variable mensaje si puede conducir
-age = 12;
-
-let mensaje2 = "";
-
-if (mayorEdad < age) {
-    mensaje2 = "Si puede conducir ";
+let mensaje = "";
+if (validacionCamposRequerido) {
+    mensaje = "Se guardo exitosamente!";
 } else {
-    mensaje2 = "No puede conducir";
+    mensaje = "Campos requeridos vacios, error guardar";
 }
-console.log(mensaje2);
+validacionCamposRequerido = false;
+console.log(mensaje);
+mensaje = (validacionCamposRequerido) ? "Se guardo exitosamente!" : "Campos requeridos vacios, error guardar";
 
-let mensaje = (mayorEdad < age) ? "Si puede conducir " : "No puede conducir";
 console.log(mensaje);
 
+let color = 'verde';
 
-let color = "rojo";
-
-if (color == "verde") { // 1 if
+if (color == "verde") {
     console.log("Siga!");
-} else if (color == 'amarillo') { // 1 else if
-    console.log("cuidado!");
-} else if (color == "rojo") { // 2 else if
-    console.log("detengase!")
-} else { // else
-    console.log("color no esta definido");
+} else if (color == "amarillo") {
+    console.log("con cuidado!");
+} else if (color == "rojo") {
+    console.log("detengase!");
+} else {
+    console.log("no esta definido!");
 }
-color = "verde";
+color = "amarillo";
 switch (color) {
-    case 'rojo':
-        console.log("detengase!")
-        break;
-    case 'amarillo':
-        console.log("cuidado!");
-        break;
     case 'verde':
         console.log("Siga!");
         break;
+    case 'amarillo':
+        console.log("con cuidado!");
+        break;
+    case 'rojo':
+        console.log("detengase!");
+        break;
     default:
-        console.log("color no esta definido");
+        console.log("no esta definido!");
         break;
 }
