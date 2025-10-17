@@ -62,7 +62,7 @@
             $apellido = "Leal";
             $edad = 35;
             $altura = 1.60;
-            $esEstudiante = true;
+            $esEstudiante = false;
 
             $espacio = "<br>";
             echo $espacio;
@@ -122,25 +122,64 @@
                     break;
             }
 
+            $a = 5; // valor 5 y de tipo numerico
+            $b = "5"; // valor es 5 , tipo string
 
-            /*
+            if ($a == $b) { // a  b son iguales en valor
+                echo "a y b tienen el mismo valor" . $espacio;
+            }
 
-switch (color) {
-    case 'verde':
-        console.log("Siga!");
-        break;
-    case 'amarillo':
-        console.log("con cuidado!");
-        break;
-    case 'rojo':
-        console.log("detengase!");
-        break;
-    default:
-        console.log("no esta definido!");
-        break;
-}
-    */
+            if ($a === $b) { // a b son iguales en valor y tipo
+                echo "a y b tienen el mismo valor y el mismo tipo" . $espacio;
+            }
 
+            if ($a != $b) { // a y b es diferente en valor
+                echo "a y b tienen diferente valor" . $espacio;
+            }
+            if ($a !== $b) { // a y b son diferentes en valor o en tipo
+                echo "a y b tienen diferente valor o tipo" . $espacio;
+            }
+            $a = 50;
+            $b = 10;
+            if ($a >= $b) {
+                echo "a es mayor o igual a b" . $espacio;
+            }
+            if ($a > $b) {
+                echo "a es mayor a b" . $espacio;
+            }
+
+            if ($a < $b) {
+                echo "b es mayor o igual a a" . $espacio;
+            }
+
+            //and or 
+
+            // condicional anidado
+            if ($edad >= 18 && $esEstudiante) {
+                echo "Es mayor de edad estudiante" . $espacio;
+            } else {
+                if ($edad >= 18 && !$esEstudiante) {
+                    echo "Es mayor de edad y no es estudiante" . $espacio;
+                } elseif ($edad < 18 || $esEstudiante) {
+                    echo "Es menor de edad o es estudiante" . $espacio;
+                }
+            }
+
+            for ($i = 0; $i <= 10; $i++) {
+                echo $i . "<br>";
+            }
+
+            // dowhile se ejecuta al menos una vez
+            $edad = 50;
+            do {
+                $edad++;
+                echo "dowhile".$edad . $espacio;
+            } while ($edad < 40);
+
+            while ($edad < 50) {
+                $edad++;
+                echo "while".$edad . $espacio;
+            }
             ?>
         </section>
     </main>
