@@ -1,8 +1,12 @@
 <?php
 session_start();
+print_r($_SESSION);
 echo $_SESSION["usuario"];
-
-session_destroy();
+echo $_SESSION["rol"];
+if($_SESSION["rol"] == "profesor"){
+    echo "Es de rol profesor";
+}
+//session_destroy();
 ?>
 <!DOCTYPE html>
 <html>
