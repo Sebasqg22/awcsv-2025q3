@@ -11,7 +11,6 @@ try {
 }
 
 echo "Conexion exitosa<br>";
-
 // CRUD
 
 //Read - SELECT
@@ -22,6 +21,7 @@ if ($result->num_rows > 0) {
 
     $tareas = $result->fetch_all(MYSQLI_ASSOC);
     print_r($tareas);
+    echo "<br>";
     foreach ($tareas as $tarea) {
         echo $tarea["descripcion"] . "-" . $tarea["activo"] . "<br>";
     }
@@ -41,7 +41,8 @@ if ($conn->query($sql) === TRUE) {
    echo "Hubo un error al insertar <br>";
 }
 */
-$sql = "update tareas set descripcion = 'Nuevo dato de tarea' where id = 1";
+
+$sql = "update tareas set descripcion = 'Nuevo dato de tarea' where id = 2";
 
 if ($conn->query($sql) === TRUE) {
     echo "Se actualizo correctamente! <br>";
@@ -59,10 +60,10 @@ if ($conn->query($sql) === TRUE) {
 
 // HASHING
 
-$clave = "12346";
+$clave = "123456";
 $hash = password_hash($clave, PASSWORD_BCRYPT);
 //echo $hash;
-$hash = '$2y$10$JT.aYnkcRTyzluaLr.nu.uvVjpHlfzRfWhtpvT1z8M4T5.dij15rO';
+$hash = '$2y$10$fozjohU2sRqly60VqUFjA.XHdqV0WLsWSyQTB72QBNzUw90ARjwaG';
 
 if (password_verify($clave, $hash)) {
     echo "Si es correcta la clave";
